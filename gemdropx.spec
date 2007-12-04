@@ -11,7 +11,7 @@ License:	GPL
 Url:		http://newbreedsoftware.com/gemdropx
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	SDL_mixer-devel XFree86-devel alsa-lib-devel esound-devel ImageMagick
+BuildRequires:	SDL_mixer-devel X11-devel alsa-lib-devel esound-devel ImageMagick
 Patch:		%{name}-0.9-fix-CFLAGS.patch.bz2
 
 %description
