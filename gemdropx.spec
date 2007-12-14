@@ -1,13 +1,13 @@
 %define	name	gemdropx
 %define	version	0.9
-%define release	%mkrel 7
+%define release	%mkrel 8
 %define	Summary	Tetris meets Space Invaders
 Summary:	%{Summary}
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/gemdropx/gemdropx-%{version}.tar.bz2
-License:	GPL
+License:	GPLv2+
 Url:		http://newbreedsoftware.com/gemdropx
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -39,27 +39,16 @@ convert data/images/gemdropx-icon.xpm -size 16x16 $RPM_BUILD_ROOT%{_miconsdir}/%
 convert data/images/gemdropx-icon.xpm -size 32x32 $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 convert data/images/gemdropx-icon.xpm -size 48x48 $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 
-%{__install} -d $RPM_BUILD_ROOT%{_menudir}
-%{__cat} <<EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="%{_gamesbindir}/%{name}" \
-  icon=%{name}.png \
-  needs="x11" \
-  section="More Applications/Games/Arcade" \
-  title="Gem Drop X"\
-  longtitle="%{Summary}" xdg="true"
-EOF
-
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=Gem Drop X
 Comment=%{summary}
 Exec=%_gamesbindir/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=Game;ArcadeGame;X-MandrivaLinux-MoreApplications-Games-Arcade;
+Categories=Game;ArcadeGame;
 EOF
 
 %post
@@ -76,10 +65,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS.txt CHANGES.txt README.txt
 %{_gamesdatadir}/%{name}
 %{_datadir}/applications/*
-%{_menudir}/%{name}
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %defattr(755,root,root,755)
 %{_gamesbindir}/%{name}
-
