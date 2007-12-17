@@ -10,7 +10,6 @@ Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/gemdropx/gemdropx-%{version}.t
 License:	GPLv2+
 Url:		http://newbreedsoftware.com/gemdropx
 Group:		Games/Arcade
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL_mixer-devel X11-devel alsa-lib-devel esound-devel ImageMagick
 Patch:		%{name}-0.9-fix-CFLAGS.patch.bz2
 
