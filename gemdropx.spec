@@ -1,6 +1,6 @@
 %define	name	gemdropx
 %define	version	0.9
-%define release	%mkrel 10
+%define release	%mkrel 11
 %define	Summary	Tetris meets Space Invaders
 Summary:	%{Summary}
 Name:		%{name}
