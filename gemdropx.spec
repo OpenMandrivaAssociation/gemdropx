@@ -1,17 +1,15 @@
-%define	name	gemdropx
-%define	version	0.9
-%define release	%mkrel 11
-%define	Summary	Tetris meets Space Invaders
-Summary:	%{Summary}
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Summary:	Tetris meets Space Invaders
+Name:		gemdropx
+Version:	0.9
+Release:	%mkrel 12
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/gemdropx/gemdropx-%{version}.tar.bz2
 License:	GPLv2+
 Url:		http://newbreedsoftware.com/gemdropx
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	SDL_mixer-devel X11-devel alsa-lib-devel esound-devel imagemagick
+BuildRequires:	SDL-devel
+BuildRequires:	SDL_mixer-devel
+BuildRequires:	imagemagick
 Patch0:		%{name}-0.9-fix-CFLAGS.patch
 
 %description
