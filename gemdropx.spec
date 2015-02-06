@@ -1,7 +1,7 @@
 Summary:	Tetris meets Space Invaders
 Name:		gemdropx
 Version:	0.9
-Release:	%mkrel 12
+Release:	13
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/gemdropx/gemdropx-%{version}.tar.bz2
 License:	GPLv2+
 Url:		http://newbreedsoftware.com/gemdropx
