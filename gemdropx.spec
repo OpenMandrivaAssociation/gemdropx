@@ -4,7 +4,7 @@ Version:	0.9
 Release:	13
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/gemdropx/gemdropx-%{version}.tar.bz2
 License:	GPLv2+
-Url:		http://newbreedsoftware.com/gemdropx
+Url:		https://newbreedsoftware.com/gemdropx
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel
