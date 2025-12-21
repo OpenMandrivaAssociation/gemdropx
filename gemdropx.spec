@@ -7,6 +7,7 @@ License:	GPLv2+
 Url:		https://newbreedsoftware.com/gemdropx
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	make
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	imagemagick
